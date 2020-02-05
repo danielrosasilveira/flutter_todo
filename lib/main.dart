@@ -6,10 +6,9 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-       title: 'Todo App',
-      theme: ThemeData(
-        primarySwatch: Colors.blue
-      ),
+      title: 'Todo App',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(primarySwatch: Colors.blue),
       home: HomePage(),
     );
   }
@@ -18,6 +17,19 @@ class App extends StatelessWidget {
 class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+        leading: Text("Oi"),
+        title: Text("Todo List"),
+        actions: <Widget>[
+          Icon(Icons.plus_one),
+        ],
+      ),
+      body: Container(
+        child: Center(
+          child: Text("Olá mundo"),
+        ),
+      ), //Container
+    ); //Scaffold
   }
 }
