@@ -14,21 +14,22 @@ class App extends StatelessWidget {
   }
 }
 
-class HomePage extends StatelessWidget {
+class HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Text("Oi"),
         title: Text("Todo List"),
-        actions: <Widget>[
-          Icon(Icons.plus_one),
-        ],
       ),
       body: Container(
         child: Center(
           child: Text("Olá mundo"),
-        ),
+        ), //Center
       ), //Container
     ); //Scaffold
   }
